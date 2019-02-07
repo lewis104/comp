@@ -1,0 +1,258 @@
+//Constestant ID: 06-0314-0045
+//Used switch case and Structure to handle variables and cout and cin to display and collect data
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	//Stucture to handle all of the variables for data
+	struct school {
+		int class1;
+		int class2;
+		int class3;
+		int class4;
+		int class5;
+		int class6;
+		int class7;
+		int class8;
+		int class9;
+		int class10;
+		int student1;
+		int student2;
+		int student3;
+		int student4;
+		int student5;
+		int student6;
+		int student7;
+		int student8;
+		int student9;
+		int student10;
+	} school;
+	//Asking for Department
+	int a, b;
+	string name;
+	cout << "0. English department" << endl;
+	cout << "1. Mathmatics Department" << endl;
+	cout << "2. Computer Science Department" << endl;
+	cout << "3. Buisness Department" << endl;
+	cout << "4. kinesiology Department" << endl;
+	cout << "5. Architecture Department" << endl;
+	cout << "6. Biology Department" << endl;
+	cout << "7. Education Department" << endl;
+	cout << "8. Chemistry Department" << endl;
+	cout << "9. Engineering Deparmtnet" << endl;
+	cout << endl;
+	cout << "pleast pick the department: ";
+	cin >> a;
+	if (a > 9) {
+		cout << "not a value, try again" << endl;
+		main();
+	}
+	if (a < 0) {
+		cout << "not a value, try again" << endl;
+		main();
+	}
+	//Switch case to handle the input and what happens when you choose department number
+	switch (a) {
+	case 0:
+		name = "English Department";
+		goto input;
+	case 1:
+		name = "Mathmatics Department";
+		goto input;
+	case 2:
+		name = "Computer Science Department";
+		goto input;
+	case 3:
+		name = "Buisness Department";
+		goto input;
+	case 4:
+		name = "kinesiology Department";
+		goto input;
+	case 5:
+		name = "Architecture Department";
+		goto input;
+	case 6:
+		name = "Biology Department";
+		goto input;
+	case 7:
+		name = "Education Department";
+		goto input;
+	case 8:
+		name = "Chemistry Department";
+		goto input;
+	case 9:
+		name = "Engineering Deparmtnet";
+		goto input;
+	}
+	// gets redirected to here since they all do the same thing / collect name of the department selected and puts it in a variable.
+input:
+	cout << "Class sizes are from 0 - 40 students." << endl;
+error1:
+	cout << "class: 400" << endl;
+	cout << "frist class students: ";
+	cin >> school.student1;
+	if (school.student1 > 40 || school.student1 < 0) {
+		cout << "pleast enter only number 0 - 40" << endl;
+		goto error1;
+	}
+error2:
+	cout << "class: 401" << endl;
+	cout << "second class students: ";
+	cin >> school.student2;
+	if (school.student2 > 40 || school.student2 < 0) {
+		cout << "pleast enter only number 0 - 40" << endl;
+		goto error2;
+	}
+error3:
+	cout << "class: 402" << endl;
+	cout << "third class students: ";
+	cin >> school.student3;
+	if (school.student3 > 40 || school.student3 < 0) {
+		cout << "pleast enter only number 0 - 40" << endl;
+		goto error3;
+	}
+error4:
+	cout << "class: 403" << endl;
+	cout << "fourth class students: ";
+	cin >> school.student4;
+	if (school.student4 > 40 || school.student4 < 0) {
+		cout << "pleast enter only number 0 - 40" << endl;
+		goto error4;
+	}
+error5:
+	cout << "class: 404" << endl;
+	cout << "fifth class students: ";
+	cin >> school.student5;
+	if (school.student5 > 40 || school.student5 < 0) {
+		cout << "pleast enter only number 0 - 40" << endl;
+		goto error5;
+	}
+error6:
+	cout << "class: 405" << endl;
+	cout << "sixth class students: ";
+	cin >> school.student6;
+	if (school.student6 > 40 || school.student6 < 0) {
+		cout << "pleast enter only number 0 - 40" << endl;
+		goto error6;
+	}
+error7:
+	cout << "class: 406" << endl;
+	cout << "seventh class students: ";
+	cin >> school.student7;
+	if (school.student7 > 40 || school.student7 < 0) {
+		cout << "pleast enter only number 0 - 40" << endl;
+		goto error7;
+	}
+error8:
+	cout << "class: 407" << endl;
+	cout << "eighth class students: ";
+	cin >> school.student8;
+	if (school.student8 > 40 || school.student8 < 0) {
+		cout << "pleast enter only number 0 - 40" << endl;
+		goto error8;
+	}
+error9:
+	cout << "class: 408" << endl;
+	cout << "ninth class students: ";
+	cin >> school.student9;
+	if (school.student9 > 40 || school.student9 < 0) {
+		cout << "pleast enter only number 0 - 40" << endl;
+		goto error9;
+	}
+error10:
+	cout << "class: 409" << endl;
+	cout << "tenth class students: ";
+	cin >> school.student10;
+	if (school.student10 > 40 || school.student10 < 0) {
+		cout << "pleast enter only number 0 - 40" << endl;
+		goto error10;
+	}
+	//This is where I do the graph
+	cout << name << endl;
+	cout << "400 ";
+	for (int i = 1; i <= school.student1; i++)
+	{
+		cout << "*";
+	}
+	cout << " " << school.student1 << endl;
+	cout << "401 ";
+	for (int i = 1; i <= school.student2; i++)
+	{
+		cout << "*";
+	}
+	cout << " " << school.student2 << endl;
+	cout << "402 ";
+	for (int i = 1; i <= school.student3; i++)
+	{
+		cout << "*";
+	}
+	cout << " " << school.student3 << endl;
+	cout << "403 ";
+	for (int i = 1; i <= school.student4; i++)
+	{
+		cout << "*";
+	}
+	cout << " " << school.student4 << endl;
+	cout << "404 ";
+	for (int i = 1; i <= school.student5; i++)
+	{
+		cout << "*";
+	}
+	cout << " " << school.student5 << endl;
+	cout << "405 ";
+	for (int i = 1; i <= school.student6; i++)
+	{
+		cout << "*";
+	}
+	cout << " " << school.student6 << endl;
+	cout << "406 ";
+	for (int i = 1; i <= school.student7; i++)
+	{
+		cout << "*";
+	}
+	cout << " " << school.student7 << endl;
+	cout << "407 ";
+	for (int i = 1; i <= school.student8; i++)
+	{
+		cout << "*";
+	}
+	cout << " " << school.student8 << endl;
+	cout << "408 ";
+	for (int i = 1; i <= school.student9; i++)
+	{
+		cout << "*";
+	}
+	cout << " " << school.student9 << endl;
+	cout << "409 ";
+	for (int i = 1; i <= school.student10; i++)
+	{
+		cout << "*";
+	}
+	cout << " " << school.student10 << endl;
+	//asks about terminate or not
+end:
+	cout << "0 = yes " << "1 = no " << "run program again? ";
+	cin >> b;
+	if (b < 0 || b > 1) {
+		cout << "invalid option" << endl;
+		goto end;
+	}
+	if (b == 1) {
+		std::terminate;
+	}
+	if (b == 0) {
+		school.student1 = 0;
+		school.student2 = 0;
+		school.student3 = 0;
+		school.student4 = 0;
+		school.student5 = 0;
+		school.student6 = 0;
+		school.student7 = 0;
+		school.student8 = 0;
+		school.student9 = 0;
+		school.student10 = 0;
+		name = "";
+		main();
+	}
+}
